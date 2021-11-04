@@ -213,4 +213,3 @@ data_list <- list(N = nrow(df),
 fitted_model <- stan(model_code = model_code,
                      data = data_list,
                      iter = 4000)
-saveRDS(fitted_model, "/Users/chelseaparlett/Desktop/SCiP Talk (BetaReg)/simple_zoib.rds")
