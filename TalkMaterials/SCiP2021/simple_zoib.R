@@ -1,10 +1,12 @@
 library(tidyverse)
 library(rstan)
 library(bayesplot)
-
+library(RCurl)
 
 # load data
-df <- read.csv("/Users/chelseaparlett/Desktop/SCiP Talk (BetaReg)/zoib_data.csv")
+x <- getURL("https://raw.githubusercontent.com/cmparlettpelleriti/TalkMaterials/master/TalkMaterials/SCiP2021/zoib_data.csv")
+
+df <- read.csv(text = x)
 
 # standata
 model_code <- 'data {
